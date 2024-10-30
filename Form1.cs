@@ -61,7 +61,7 @@ namespace PieChart
 
         private void btn_CreatePieChart_Click(object sender, EventArgs e)
         {
-            this.Invalidate(); //force form to redraw Form1_Paint, this paints the pie chart
+            this.Refresh(); //force form to redraw Form1_Paint, this paints the pie chart
         }
 
         private void btn_AddToList_Click(object sender, EventArgs e)
@@ -81,6 +81,7 @@ namespace PieChart
             listBox.Items.Clear();
             numbers.Clear();
             i = 0; //reset index to 0
+            this.Refresh();
         }
     }
 }
