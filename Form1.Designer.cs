@@ -34,16 +34,20 @@
             this.btn_AddToList = new System.Windows.Forms.Button();
             this.btn_CreatePieChart = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListBox();
+            this.btn_ResetList = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 84);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.Size = new System.Drawing.Size(184, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Pie chart maker";
+            this.label1.Text = "Pie Chart Maker";
             // 
             // label2
             // 
@@ -67,33 +71,71 @@
             this.btn_AddToList.Name = "btn_AddToList";
             this.btn_AddToList.Size = new System.Drawing.Size(75, 23);
             this.btn_AddToList.TabIndex = 3;
-            this.btn_AddToList.Text = "Add";
+            this.btn_AddToList.Text = "Add To List";
             this.btn_AddToList.UseVisualStyleBackColor = true;
             this.btn_AddToList.Click += new System.EventHandler(this.btn_AddToList_Click);
             // 
             // btn_CreatePieChart
             // 
-            this.btn_CreatePieChart.Location = new System.Drawing.Point(188, 185);
+            this.btn_CreatePieChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_CreatePieChart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_CreatePieChart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_CreatePieChart.Location = new System.Drawing.Point(212, 286);
             this.btn_CreatePieChart.Name = "btn_CreatePieChart";
-            this.btn_CreatePieChart.Size = new System.Drawing.Size(75, 51);
+            this.btn_CreatePieChart.Size = new System.Drawing.Size(100, 23);
             this.btn_CreatePieChart.TabIndex = 4;
-            this.btn_CreatePieChart.Text = "Create Pie Chart From List";
-            this.btn_CreatePieChart.UseVisualStyleBackColor = true;
+            this.btn_CreatePieChart.Text = "Create Pie Chart";
+            this.btn_CreatePieChart.UseVisualStyleBackColor = false;
             this.btn_CreatePieChart.Click += new System.EventHandler(this.btn_CreatePieChart_Click);
             // 
             // listBox
             // 
             this.listBox.FormattingEnabled = true;
-            this.listBox.Location = new System.Drawing.Point(43, 185);
+            this.listBox.Location = new System.Drawing.Point(131, 170);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(120, 95);
+            this.listBox.Size = new System.Drawing.Size(181, 95);
             this.listBox.TabIndex = 5;
+            // 
+            // btn_ResetList
+            // 
+            this.btn_ResetList.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_ResetList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_ResetList.Location = new System.Drawing.Point(131, 286);
+            this.btn_ResetList.Name = "btn_ResetList";
+            this.btn_ResetList.Size = new System.Drawing.Size(75, 23);
+            this.btn_ResetList.TabIndex = 6;
+            this.btn_ResetList.Text = "Reset List";
+            this.btn_ResetList.UseVisualStyleBackColor = false;
+            this.btn_ResetList.Click += new System.EventHandler(this.btn_ResetList_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(40, 170);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "List of numbers:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(40, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(862, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Enter a number to add to the list below.The pie chart maker will take the numbers" +
+    " from the list and create a pie chart off of them. Each slice represents the num" +
+    "ber\'s part from the total.";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 861);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btn_ResetList);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.btn_CreatePieChart);
             this.Controls.Add(this.btn_AddToList);
@@ -116,6 +158,9 @@
         private System.Windows.Forms.Button btn_AddToList;
         private System.Windows.Forms.Button btn_CreatePieChart;
         private System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.Button btn_ResetList;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

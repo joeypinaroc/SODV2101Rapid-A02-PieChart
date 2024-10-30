@@ -13,7 +13,8 @@ namespace PieChart
 {
     public partial class Form1 : Form
     {
-        public static List<Color> colors = new List<Color>()
+        public int i = 0; //index for colors List
+        public static List<Color> colors = new List<Color>() //static list for colors
         {
             Color.Black,
             Color.Blue,
@@ -23,6 +24,7 @@ namespace PieChart
             Color.GreenYellow,
             Color.DarkRed
         };
+        public List<float> numbers = new List<float>();
         public static List<float> ConvertToDegrees(List<float> values) //convert input list to a list of degrees summing to 360
         {
             List<float> convertedValues = new List<float>();
@@ -41,18 +43,11 @@ namespace PieChart
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics graphics = this.CreateGraphics();
-            Pen outline = new Pen(Color.Black, 1);
+            Pen outline = new Pen(Color.Black, 3);
 
             Rectangle rect = new Rectangle(450, 250, 400, 400);
 
             //e.Graphics.DrawRectangle(outline, rect);
-
-            List<float> numbers = new List<float>();
-            numbers.Add(10);
-            numbers.Add(20);
-            numbers.Add(10);
-            numbers.Add(20);
-            numbers.Add(50);
 
             List<float> degrees = ConvertToDegrees(numbers);
 
@@ -76,9 +71,18 @@ namespace PieChart
             if(textBox_Input != null)
             {
                 float temp = float.Parse(textBox_Input.Text);
-                listBox.Items.Add(temp);
+                listBox.Items.Add(temp + " - " + colors[i].Name);
+                numbers.Add(temp);
                 textBox_Input.Text = "";
+                i++;
             }
+        }
+
+        private void btn_ResetList_Click(object sender, EventArgs e)
+        {
+            listBox.Items.Clear();
+            numbers.Clear();
+            i = 0; //reset index to 0
         }
     }
 }
