@@ -47,12 +47,10 @@ namespace PieChart
 
             Rectangle rect = new Rectangle(450, 250, 400, 400);
 
-            //e.Graphics.DrawRectangle(outline, rect);
+            List<float> degrees = ConvertToDegrees(numbers); //convert input numbers list to a list of degrees
 
-            List<float> degrees = ConvertToDegrees(numbers);
-
+            //use DrawPie and FillPie method to create pie chart slices
             float startAngle = 0;
-
             for (int i = 0; i < degrees.Count; i++)
             {
                 e.Graphics.DrawPie(outline, rect, startAngle, degrees[i]);
@@ -63,7 +61,7 @@ namespace PieChart
 
         private void btn_CreatePieChart_Click(object sender, EventArgs e)
         {
-            this.Invalidate();
+            this.Invalidate(); //force form to redraw Form1_Paint, this paints the pie chart
         }
 
         private void btn_AddToList_Click(object sender, EventArgs e)
@@ -74,7 +72,7 @@ namespace PieChart
                 listBox.Items.Add(temp + " - " + colors[i].Name);
                 numbers.Add(temp);
                 textBox_Input.Text = "";
-                i++;
+                i++; //index scrolls through colors list
             }
         }
 
