@@ -82,6 +82,7 @@ namespace PieChart
             numbers.Clear();
             i = 0; //reset index to 0
             this.Refresh();
+            // Test commit on my branch
         }
     }
 }
