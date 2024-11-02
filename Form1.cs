@@ -57,6 +57,24 @@ namespace PieChart
                 e.Graphics.FillPie(new SolidBrush(colors[i]), rect, startAngle, degrees[i]);
                 startAngle += degrees[i];
             }
+
+            // Draw the legend
+            int legendX = 880;
+            int legendY = 250;
+            int legendWidth = 20;
+            int legendHeight = 20;
+
+            // Loop through to create legend entries
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                // Draw the color box for the legend
+                Brush colorBrush = new SolidBrush(colors[i]);
+                graphics.FillRectangle(colorBrush, legendX, legendY + (i * (legendHeight + 5)), legendWidth, legendHeight);
+
+                // Draw the corresponding label
+                graphics.DrawString(numbers[i].ToString() + " - " + colors[i].Name,
+                    this.Font, Brushes.Black, legendX + legendWidth + 5, legendY + (i * (legendHeight + 5)));
+            }
         }
 
         private void btn_CreatePieChart_Click(object sender, EventArgs e)
@@ -66,13 +84,18 @@ namespace PieChart
 
         private void btn_AddToList_Click(object sender, EventArgs e)
         {
-            if(textBox_Input != null)
+            float temp;
+            if ((textBox_Input != null) && (float.TryParse(textBox_Input.Text,out temp)))
             {
-                float temp = float.Parse(textBox_Input.Text);
+                temp = float.Parse(textBox_Input.Text);
                 listBox.Items.Add(temp + " - " + colors[i].Name);
                 numbers.Add(temp);
                 textBox_Input.Text = "";
                 i++; //index scrolls through colors list
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid number.");
             }
         }
 
@@ -82,7 +105,6 @@ namespace PieChart
             numbers.Clear();
             i = 0; //reset index to 0
             this.Refresh();
-            // Test commit on my branch
         }
     }
 }

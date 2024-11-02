@@ -63,7 +63,7 @@
             // textBox_Input
             // 
             this.textBox_Input.Location = new System.Drawing.Point(175, 160);
-            this.textBox_Input.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Input.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Input.Name = "textBox_Input";
             this.textBox_Input.Size = new System.Drawing.Size(132, 22);
             this.textBox_Input.TabIndex = 2;
@@ -71,7 +71,7 @@
             // btn_AddToList
             // 
             this.btn_AddToList.Location = new System.Drawing.Point(316, 156);
-            this.btn_AddToList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_AddToList.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AddToList.Name = "btn_AddToList";
             this.btn_AddToList.Size = new System.Drawing.Size(100, 28);
             this.btn_AddToList.TabIndex = 3;
@@ -85,7 +85,7 @@
             this.btn_CreatePieChart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btn_CreatePieChart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_CreatePieChart.Location = new System.Drawing.Point(283, 352);
-            this.btn_CreatePieChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CreatePieChart.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CreatePieChart.Name = "btn_CreatePieChart";
             this.btn_CreatePieChart.Size = new System.Drawing.Size(133, 28);
             this.btn_CreatePieChart.TabIndex = 4;
@@ -98,7 +98,7 @@
             this.listBox.FormattingEnabled = true;
             this.listBox.ItemHeight = 16;
             this.listBox.Location = new System.Drawing.Point(175, 209);
-            this.listBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox.Margin = new System.Windows.Forms.Padding(4);
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(240, 116);
             this.listBox.TabIndex = 5;
@@ -108,7 +108,7 @@
             this.btn_ResetList.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_ResetList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_ResetList.Location = new System.Drawing.Point(175, 352);
-            this.btn_ResetList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ResetList.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ResetList.Name = "btn_ResetList";
             this.btn_ResetList.Size = new System.Drawing.Size(100, 28);
             this.btn_ResetList.TabIndex = 6;
@@ -140,8 +140,8 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1579, 1055);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -152,9 +152,9 @@
             this.Controls.Add(this.textBox_Input);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Pie Chart";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
