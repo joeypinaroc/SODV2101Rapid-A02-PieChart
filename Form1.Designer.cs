@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_Title = new System.Windows.Forms.Label();
+            this.lbl_TextboxInput = new System.Windows.Forms.Label();
             this.textBox_Input = new System.Windows.Forms.TextBox();
             this.btn_AddToList = new System.Windows.Forms.Button();
             this.btn_CreatePieChart = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListBox();
             this.btn_ResetList = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_Listbox = new System.Windows.Forms.Label();
+            this.lbl_Instruction = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_Title
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 60);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pie Chart Maker";
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.Location = new System.Drawing.Point(51, 60);
+            this.lbl_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(224, 31);
+            this.lbl_Title.TabIndex = 0;
+            this.lbl_Title.Text = "Pie Chart Maker";
             // 
-            // label2
+            // lbl_TextboxInput
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 166);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Enter a number: ";
+            this.lbl_TextboxInput.AutoSize = true;
+            this.lbl_TextboxInput.Location = new System.Drawing.Point(53, 166);
+            this.lbl_TextboxInput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TextboxInput.Name = "lbl_TextboxInput";
+            this.lbl_TextboxInput.Size = new System.Drawing.Size(103, 16);
+            this.lbl_TextboxInput.TabIndex = 1;
+            this.lbl_TextboxInput.Text = "Enter a number: ";
             // 
             // textBox_Input
             // 
@@ -116,45 +116,45 @@
             this.btn_ResetList.UseVisualStyleBackColor = false;
             this.btn_ResetList.Click += new System.EventHandler(this.btn_ResetList_Click);
             // 
-            // label3
+            // lbl_Listbox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 209);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 16);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "List of numbers:";
+            this.lbl_Listbox.AutoSize = true;
+            this.lbl_Listbox.Location = new System.Drawing.Point(53, 209);
+            this.lbl_Listbox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Listbox.Name = "lbl_Listbox";
+            this.lbl_Listbox.Size = new System.Drawing.Size(99, 16);
+            this.lbl_Listbox.TabIndex = 7;
+            this.lbl_Listbox.Text = "List of numbers:";
             // 
-            // label4
+            // lbl_Instruction
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 113);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1064, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Enter a number to add to the list below.The pie chart maker will take the numbers" +
-    " from the list and create a pie chart off of them. Each slice represents the num" +
-    "ber\'s part from the total.";
+            this.lbl_Instruction.AutoSize = true;
+            this.lbl_Instruction.Location = new System.Drawing.Point(53, 113);
+            this.lbl_Instruction.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Instruction.Name = "lbl_Instruction";
+            this.lbl_Instruction.Size = new System.Drawing.Size(1047, 16);
+            this.lbl_Instruction.TabIndex = 8;
+            this.lbl_Instruction.Text = "Enter a number to add to the list below.The pie chart maker will take the numbers" +
+    " from the list and create a pie chart of them. Each slice represents the number\'" +
+    "s part from the total.";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1579, 1055);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_Instruction);
+            this.Controls.Add(this.lbl_Listbox);
             this.Controls.Add(this.btn_ResetList);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.btn_CreatePieChart);
             this.Controls.Add(this.btn_AddToList);
             this.Controls.Add(this.textBox_Input);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_TextboxInput);
+            this.Controls.Add(this.lbl_Title);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Pie Chart";
+            this.Text = "Pie Chart Maker";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,15 +163,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_Title;
+        private System.Windows.Forms.Label lbl_TextboxInput;
         private System.Windows.Forms.TextBox textBox_Input;
         private System.Windows.Forms.Button btn_AddToList;
         private System.Windows.Forms.Button btn_CreatePieChart;
         private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.Button btn_ResetList;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_Listbox;
+        private System.Windows.Forms.Label lbl_Instruction;
     }
 }
 
